@@ -61,7 +61,7 @@ def main():
             print(f'{query = }')
 
             # 2. llm 질의
-            st.session_state['messages'].append({'role': 'system', 'content': query})
+            st.session_state['messages'].append({'role': 'user', 'content': query})
             response: str = ask_gpt(st.session_state['messages'], model)
             print(f'{response = }')
             st.session_state['messages'].append({'role': 'assistant', 'content': response})
