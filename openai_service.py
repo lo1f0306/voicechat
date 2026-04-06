@@ -40,7 +40,7 @@ def tts(response: str):
     filename = 'output.mp3'
     with client.audio.speech.with_streaming_response.create(
         model='tts-1',
-        voice='nova',
+        voice='onyx',
         input=response
     ) as rest:
         rest.stream_to_file(filename)
